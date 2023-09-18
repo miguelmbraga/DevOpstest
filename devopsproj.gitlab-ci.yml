@@ -1,0 +1,10 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - mkdir public  # Create a directory for your web files (if it doesn't exist)
+    - cp index.html public/  # Copy your HTML file to the public directory
+  only:
+    - main  # Define the branch to trigger deployment (e.g., main, master)
